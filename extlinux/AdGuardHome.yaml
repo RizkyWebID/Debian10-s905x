@@ -1,0 +1,210 @@
+###################
+# DNS List AdGuard
+dns:
+  bind_hosts:
+  - 0.0.0.0
+  port: 53
+  statistics_interval: 1
+  querylog_enabled: true
+  querylog_file_enabled: true
+  querylog_interval: 24h
+  querylog_size_memory: 1000
+  anonymize_client_ip: false
+  protection_enabled: true
+  blocking_mode: default
+  blocking_ipv4: ""
+  blocking_ipv6: ""
+  blocked_response_ttl: 10
+  parental_block_host: family-block.dns.adguard.com
+  safebrowsing_block_host: standard-block.dns.adguard.com
+  ratelimit: 20
+  ratelimit_whitelist: []
+  refuse_any: true
+  upstream_dns:
+  - https://dns.google/dns-query
+  - https://dns-family.adguard.com/dns-query
+  - https://family.cloudflare-dns.com/dns-query
+  upstream_dns_file: ""
+  bootstrap_dns:
+  - 118.98.115.69
+  - 118.98.115.70
+  - 118.98.44.10
+  - 118.98.44.100
+  - 94.140.14.15
+  - 94.140.15.16
+  - 2a10:50c0::bad1:ff
+  - 2a10:50c0::bad2:ff
+  - 8.8.8.8
+  - 8.8.4.4
+  - 2001:4860:4860::8888
+  - 2001:4860:4860::8844
+  - 1.1.1.3
+  - 1.0.0.3
+  - 2606:4700:4700::1113
+  - 2606:4700:4700::1003
+  all_servers: false
+  fastest_addr: true
+  fastest_timeout: 1s
+  allowed_clients: []
+  disallowed_clients: []
+  blocked_hosts:
+  - version.bind
+  - id.server
+  - hostname.bind
+  trusted_proxies:
+  - 127.0.0.0/8
+  - ::1/128
+  cache_size: 4194304
+  cache_ttl_min: 0
+  cache_ttl_max: 0
+  cache_optimistic: false
+  bogus_nxdomain: []
+  aaaa_disabled: false
+  enable_dnssec: false
+  edns_client_subnet: false
+  max_goroutines: 300
+  ipset: []
+  filtering_enabled: true
+  filters_update_interval: 24
+  parental_enabled: true
+  safesearch_enabled: true
+  safebrowsing_enabled: true
+  safebrowsing_cache_size: 1048576
+  safesearch_cache_size: 1048576
+  parental_cache_size: 1048576
+  cache_time: 30
+  rewrites: []
+  blocked_services: []
+  upstream_timeout: 10s
+  local_domain_name: lan
+  resolve_clients: true
+  use_private_ptr_resolvers: true
+  local_ptr_upstreams:
+  - 192.168.255.10
+###################
+# Data List AdGuard
+filters:
+- enabled: true
+  url: https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt
+  name: AdGuard DNS filter
+  id: 1001
+- enabled: true
+  url: https://adaway.org/hosts.txt
+  name: AdAway Default Blocklist
+  id: 1002
+- enabled: true
+  url: https://someonewhocares.org/hosts/zero/hosts
+  name: Dan Pollock's List
+  id: 1003
+- enabled: true
+  url: https://raw.githubusercontent.com/DandelionSprout/adfilt/master/GameConsoleAdblockList.txt
+  name: Game Console Adblock List
+  id: 1004
+- enabled: true
+  url: https://abp.oisd.nl/basic/
+  name: OISD Blocklist Basic
+  id: 1005
+- enabled: true
+  url: https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV-AGH.txt
+  name: Perflyst and Dandelion Sprout's Smart-TV Blocklist
+  id: 1006
+- enabled: true
+  url: https://pgl.yoyo.org/adservers/serverlist.php?hostformat=adblockplus&showintro=1&mimetype=plaintext
+  name: Peter Lowe's List
+  id: 1007
+- enabled: true
+  url: https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareAdGuardHome.txt
+  name: Dandelion Sprout's Anti-Malware List
+  id: 1008
+- enabled: true
+  url: https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/hosts.txt
+  name: NoCoin Filter List
+  id: 1009
+- enabled: true
+  url: https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/adguard.txt
+  name: Scam Blocklist by DurableNapkin
+  id: 1010
+- enabled: true
+  url: https://raw.githubusercontent.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/master/hosts
+  name: The Big List of Hacked Malware Web Sites
+  id: 1011
+- enabled: true
+  url: https://anti-ad.net/easylist.txt
+  name: 'CHN: anti-AD'
+  id: 1012
+- enabled: true
+  url: https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/subscriptions/abpindo.txt
+  name: 'IDN: ABPindo'
+  id: 1013
+- enabled: true
+  url: https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/blacklist/unwanted-iranian.txt
+  name: 'IRN: Unwanted Iranian domains'
+  id: 1014
+- enabled: true
+  url: https://filtri-dns.ga/filtri.txt
+  name: 'ITA: Filtri-DNS'
+  id: 1015
+- enabled: true
+  url: https://raw.githubusercontent.com/yous/YousList/master/hosts.txt
+  name: 'KOR: YousList'
+  id: 1016
+- enabled: true
+  url: https://raw.githubusercontent.com/cchevy/macedonian-pi-hole-blocklist/master/hosts.txt
+  name: 'MKD: Macedonian Pi-hole Blocklist'
+  id: 1017
+- enabled: true
+  url: https://easylist-downloads.adblockplus.org/easylistdutch.txt
+  name: 'NLD: Easylist'
+  id: 1018
+- enabled: true
+  url: https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NordicFiltersAdGuardHome.txt
+  name: 'NOR: Dandelion Sprouts nordiske filtre'
+  id: 1019
+- enabled: true
+  url: https://raw.githubusercontent.com/MajkiIT/polish-ads-filter/master/polish-pihole-filters/hostfile.txt
+  name: 'POL: Polish filters for Pi hole'
+  id: 1020
+- enabled: true
+  url: https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Hosts-File.txt
+  name: 'SWE: Frellwit''s Swedish Hosts File'
+  id: 1021
+- enabled: true
+  url: https://abpvn.com/android/abpvn.txt
+  name: 'VNM: ABPVN List'
+  id: 1022
+- enabled: true
+  url: https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/spy.txt
+  name: WindowsSpyBlocker - Hosts spy rules
+  id: 1023
+- enabled: true
+  url: https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+  name: Steven Black Hosts
+  id: 1024
+- enabled: true
+  url: https://gist.githubusercontent.com/funkatron/4178744/raw/65d82527ea96b5f9e597bef38402711296ac29a2/adobe_activation_hosts.txt
+  name: Block Adobe
+  id: 1025
+- enabled: true
+  url: https://raw.githubusercontent.com/anudeepND/youtubeadsblacklist/master/domainlist.txt
+  name: Block YouTube ADS
+  id: 1026
+- enabled: true
+  url: http://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=0&mimetype=plaintext
+  name: Micu DNS 1
+  id: 1027
+- enabled: true
+  url: http://someonewhocares.org/hosts/hosts
+  name: Micu DNS 2
+  id: 1028
+- enabled: true
+  url: http://getadhell.com/standard-package.txt
+  name: Micu DNS 3
+  id: 1029
+- enabled: true
+  url: https://www.micu.eu/adblock/youtube_complete.txt
+  name: Micu DNS 4
+  id: 1030
+- enabled: true
+  url: https://www.micu.eu/adblock/ad_list.txt
+  name: Micu DNS 5
+  id: 1031
