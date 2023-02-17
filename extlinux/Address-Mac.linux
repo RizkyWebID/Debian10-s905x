@@ -1,0 +1,16 @@
+source /etc/network/interfaces.d/*
+
+# Network Is Managed By Network Manager
+auto lo
+iface lo inet loopback
+
+# Network Set MAC And IP Address STB
+auto eth0
+allow-hotplug eth0
+	iface eth0 inet dhcp
+#	iface eth0 inet static
+
+#	address	192.168.255.99/24
+#	gateway	192.168.255.10
+
+	hwaddress ether 08:13:91:31:60:60
