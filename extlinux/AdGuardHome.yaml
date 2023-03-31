@@ -418,9 +418,13 @@ filters:
     name: Micu Adlist
     id: 172
   - enabled: true
+    url: https://www.micu.eu/adblock/adblock_lite.php
+    name: Micu Adblock Lite
+    id: 173
+  - enabled: true
     url: https://www.micu.eu/adblock/youtube_complete.txt
     name: Micu Youtube
-    id: 173
+    id: 174
 whitelist_filters: []
 user_rules:
   - '||acs.telkom.net.itotolink.net^$important'
